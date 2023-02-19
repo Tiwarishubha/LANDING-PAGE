@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Landing page</title>
+    <link rel="stylesheet" href="coffee.css">
+</head>
+<body>
+      <section class="sec">
+           <header>
+           <p>COFFEE </p>
+           <div class="toggleMenu" onclick=" menuToggle();"></div>
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+           </header>
+           <div class="content">
+              <div class="textbox">
+                <h2>Enjoy Your <br> <span>Morning Coffee</span></h2>
+                <p>Boost your productivity and build your mood with a glass of coffe in the morning.</p>
+                <a href="#">view</a>
+              </div>
+              <div class="imgbox">
+                 <img src="cup.webp" class="cup">
+              </div>
+           </div>
+           <ul class="thumb">
+              <li><img src="cup.webp" onclick="imgSlider('cup.webp');changeBgColor('#FEF8D0')"></li>
+              <li><img src="cup2.png" onclick="imgSlider('cup2.png');changeBgColor('#DAC09F')"></li>
+              <li><img src="cup3.png" onclick="imgSlider('cup3.png');changeBgColor('#FFECD0')"></li>
+           </ul>
+           <ul class="logo">
+              <li><a href="#"><img src="instagram.png"></a></li>
+              <li><a href="#"><img src="facebook.png"></a></li>
+              <li><a href="#"><img src="twitter.png"></a></li>
+           </ul>
+      </section>
+      <script type="text/javascript">
+         function imgSlider(anything){
+            document.querySelector('.cup').src = anything;
+         }
+         function changeBgColor(color){
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+         }
+         function menuToggle(){
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const nav = document.querySelector('.nav');
+            toggleMenu.classList.toggle('active')
+            nav.classList.toggle('active')
+         }
+      </script>
+</body>
+</html>
